@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --font-playfair: "Playfair Display", serif;
+    --font-manrope: "Manrope", sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-manrope);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
+}
+
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
