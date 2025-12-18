@@ -36,21 +36,24 @@ export function Hero() {
                         No camera, no actors, no hassle. Just type and publish.
                     </p>
 
-                    {/* CTA Group */}
-                    <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto mb-20">
-                        <Button asChild size="lg" className="h-14 px-10 text-lg bg-white text-slate-950 hover:bg-slate-200 border-none rounded-full font-semibold shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] transition-all hover:scale-105">
-                            <Link href="/signup">
-                                Start Creating
-                                <ArrowRight className="ml-2 h-5 w-5" />
-                            </Link>
+                    {/* Waitlist Form */}
+                    <form action={async (formData) => {
+                        "use server";
+                        const { addToWaitlist } = await import("@/app/actions");
+                        await addToWaitlist(formData);
+                    }} className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md mx-auto mb-20">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                            className="w-full h-14 px-6 rounded-full bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all"
+                        />
+                        <Button type="submit" size="lg" className="w-full sm:w-auto h-14 px-8 text-lg bg-white text-slate-950 hover:bg-slate-200 rounded-full font-semibold shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] transition-all hover:scale-105 whitespace-nowrap">
+                            Join Waitlist
+                            <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
-                        <Button asChild size="lg" variant="outline" className="h-14 px-10 text-lg border-white/10 bg-white/5 hover:bg-white/10 text-white rounded-full backdrop-blur-sm transition-all hover:scale-105">
-                            <Link href="#demo">
-                                <Play className="mr-2 h-5 w-5 fill-current" />
-                                View Demo
-                            </Link>
-                        </Button>
-                    </div>
+                    </form>
 
                     {/* Social Proof / "Craft" Signal */}
                     <div className="flex items-center gap-4 text-sm text-slate-500 font-medium">

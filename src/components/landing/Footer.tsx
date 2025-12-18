@@ -10,7 +10,7 @@ export function Footer() {
                         <div className="flex items-center gap-2 mb-6">
                             <div className="relative h-8 w-8 rounded-md overflow-hidden">
                                 <Image
-                                    src="/vidnova-logo.jpg"
+                                    src="/icon.jpg"
                                     alt="VidNova Logo"
                                     fill
                                     className="object-cover"

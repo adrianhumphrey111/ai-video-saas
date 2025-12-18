@@ -16,6 +16,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "VidNova - AI Video Generation",
   description: "Create studio-quality AI avatars and videos in minutes with VidNova.",
+
 };
 
 export default function RootLayout({

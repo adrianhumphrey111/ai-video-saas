@@ -11,7 +11,7 @@ export function Navbar() {
                 <div className="flex items-center gap-2">
                     <div className="relative h-8 w-8 rounded-md overflow-hidden">
                         <Image
-                            src="/vidnova-logo.jpg"
+                            src="/icon.jpg"
                             alt="VidNova Logo"
                             fill
                             className="object-cover"
@@ -39,7 +39,7 @@ export function Navbar() {
                         Login
                     </Link>
                     <Button asChild size="sm" className="h-8 px-4 text-xs bg-white text-slate-950 hover:bg-slate-200 rounded-full font-semibold">
-                        <Link href="/signup">Get Started</Link>
+                        <Link href="#">Join Waitlist</Link>
                     </Button>
                 </div>
             </div>

@@ -15,13 +15,24 @@ export function CTA() {
                     <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light">
                         Join thousands of marketers and creators who are saving time and money with AI avatars.
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Button asChild size="lg" className="h-14 px-10 text-lg bg-white hover:bg-slate-200 text-slate-950 rounded-full font-semibold">
-                            <Link href="/signup">
-                                Get Started for Free
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+                        <form action={async (formData) => {
+                            "use server";
+                            const { addToWaitlist } = await import("@/app/actions");
+                            await addToWaitlist(formData);
+                        }} className="flex flex-col sm:flex-row items-center gap-4 w-full">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                                className="w-full h-14 px-6 rounded-full bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all"
+                            />
+                            <Button type="submit" size="lg" className="w-full sm:w-auto h-14 px-8 text-lg bg-white hover:bg-slate-200 text-slate-950 rounded-full font-semibold whitespace-nowrap">
+                                Join Waitlist
                                 <ArrowRight className="ml-2 h-5 w-5" />
-                            </Link>
-                        </Button>
+                            </Button>
+                        </form>
                     </div>
                 </div>
             </div>

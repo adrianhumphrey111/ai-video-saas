@@ -69,8 +69,8 @@ export function Pricing() {
                         <div
                             key={index}
                             className={`relative p-10 rounded-3xl border transition-all duration-300 ${plan.popular
-                                    ? "bg-white/5 border-white/20 shadow-2xl shadow-white/5 scale-105 z-10"
-                                    : "bg-transparent border-white/10 hover:bg-white/5"
+                                ? "bg-white/5 border-white/20 shadow-2xl shadow-white/5 scale-105 z-10"
+                                : "bg-transparent border-white/10 hover:bg-white/5"
                                 }`}
                         >
                             {plan.popular && (
@@ -100,11 +100,11 @@ export function Pricing() {
                             <Button
                                 asChild
                                 className={`w-full h-12 rounded-full font-semibold ${plan.popular
-                                        ? "bg-white hover:bg-slate-200 text-slate-950"
-                                        : "bg-white/10 text-white hover:bg-white/20"
+                                    ? "bg-white hover:bg-slate-200 text-slate-950"
+                                    : "bg-white/10 text-white hover:bg-white/20"
                                     }`}
                             >
-                                <Link href="/signup">{plan.cta}</Link>
+                                <Link href="#">Join Waitlist</Link>
                             </Button>
                         </div>
                     ))}
