@@ -69,7 +69,7 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
                         className="w-full justify-start gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 py-6 text-base font-semibold text-white shadow-lg shadow-blue-900/20 hover:from-cyan-400 hover:to-blue-500 hover:shadow-blue-500/20"
                         asChild
                     >
-                        <Link href="/avatars/create/video">
+                        <Link href="/dashboard">
                             <Plus className="h-5 w-5" />
                             Create Video
                         </Link>
