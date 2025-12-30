@@ -1,0 +1,19 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B0C10" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#g)"/>
+  <g opacity="0.5">
+    <circle cx="400" cy="280" r="120" fill="#1F2937"/>
+    <rect x="240" y="440" width="320" height="420" rx="30" fill="#1F2937"/>
+  </g>
+  <text x="400" y="720" text-anchor="middle" fill="#9CA3AF" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="24" letter-spacing="1">
+    Generate your first image
+  </text>
+  <text x="400" y="760" text-anchor="middle" fill="#6B7280" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="18">
+    Describe what you want or upload a photo
+  </text>
+</svg>

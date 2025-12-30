@@ -38,7 +38,7 @@ export function Testimonials() {
                                 ))}
                             </div>
                             <p className="text-lg text-slate-300 mb-8 leading-relaxed font-light">
-                                "{t.quote}"
+                                &ldquo;{t.quote}&rdquo;
                             </p>
                             <div>
                                 <p className="font-semibold text-white">{t.author}</p>

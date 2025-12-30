@@ -5,7 +5,7 @@ Next.js App Router on Bun with shadcn/ui, tRPC, Supabase helpers, Drizzle, and P
 ## Quickstart
 
 ```bash
-cp .env.example .env.local  # fill Supabase + DATABASE_URL + Polar
+cp .env.example .env.local  # fill Supabase + POSTGRES_URL + Polar
 bun install
 bun dev
 ```
@@ -18,7 +18,7 @@ Visit http://localhost:3000 – the hero page shows a live tRPC health check.
 - Generate SQL: `bun run db:generate`
 - Push to DB: `bun run db:push`
 
-`drizzle.config.ts` expects `DATABASE_URL` (Supabase connection string works).
+`drizzle.config.ts` expects `POSTGRES_URL` (Supabase connection string works).
 
 ## Supabase helpers
 

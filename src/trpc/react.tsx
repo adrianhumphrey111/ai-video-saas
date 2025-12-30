@@ -33,7 +33,7 @@ export function TRPCProvider({ children }: { children: React.ReactNode }) {
           enabled: (opts) =>
             process.env.NODE_ENV === "development" &&
             typeof window !== "undefined" &&
-            (opts.direction === "down" || (opts as any).result?.type === "error"),
+            opts.direction === "down",
         }),
         httpBatchLink({
           url: `${getBaseUrl()}/api/trpc`,

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Star } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
+import { GetStartedButton } from "./GetStartedButton";
 
 export function Hero() {
     return (
@@ -36,24 +36,10 @@ export function Hero() {
                         No camera, no actors, no hassle. Just type and publish.
                     </p>
 
-                    {/* Waitlist Form */}
-                    <form action={async (formData) => {
-                        "use server";
-                        const { addToWaitlist } = await import("@/app/actions");
-                        await addToWaitlist(formData);
-                    }} className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md mx-auto mb-20">
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Enter your email"
-                            required
-                            className="w-full h-14 px-6 rounded-full bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all"
-                        />
-                        <Button type="submit" size="lg" className="w-full sm:w-auto h-14 px-8 text-lg bg-white text-slate-950 hover:bg-slate-200 rounded-full font-semibold shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] transition-all hover:scale-105 whitespace-nowrap">
-                            Join Waitlist
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                    </form>
+                    {/* Get Started Button */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto mb-20">
+                        <GetStartedButton />
+                    </div>
 
                     {/* Social Proof / "Craft" Signal */}
                     <div className="flex items-center gap-4 text-sm text-slate-500 font-medium">

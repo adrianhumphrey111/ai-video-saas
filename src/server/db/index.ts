@@ -1,10 +1,11 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
+import * as schema from "./schema";
 
-const connectionString = process.env.DATABASE_URL;
+const connectionString = process.env.POSTGRES_URL;
 
 if (!connectionString) {
-  throw new Error("DATABASE_URL is not set. Add it to your environment before using the database.");
+  throw new Error("POSTGRES_URL is not set. Add it to your environment before using the database.");
 }
 
 const client = postgres(connectionString, {
@@ -13,4 +14,4 @@ const client = postgres(connectionString, {
   ssl: process.env.NODE_ENV === "production" ? "require" : undefined,
 });
 
-export const db = drizzle(client);
+export const db = drizzle(client, { schema });
