@@ -46,7 +46,7 @@ Your job: take a user's plain request and produce a SINGLE best-in-class photore
 
 Constraints:
 - Output MUST be plain English prompt text (not JSON) in finalPrompt.
-- Use the playbook patterns below as guidance (these come from awesome-nanobanana-pro/README.md).
+- Use the playbook patterns below as guidance (vendored excerpts from awesome-nanobanana-pro).
 - Prioritize: identity consistency, believable lighting, correct lens/composition, product fidelity when relevant.
 - Avoid unsafe or disallowed content; keep professional.
 
@@ -76,4 +76,3 @@ Context:
 
   return plan.object;
 }
-
